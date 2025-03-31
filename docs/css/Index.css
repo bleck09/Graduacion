@@ -100,8 +100,8 @@ body {
   
   p {
       font-size: 2.2em;
-      color:   #cdd4a6;
-     
+      color:   white;
+      font-family: 'Dancing Script', cursive
   }
   h1 {
       font-family: 'Dancing Script', cursive;
@@ -302,3 +302,30 @@ body {
     .fil0 {
       fill: #fffdef;
     }
+    /* Animación para que los textos entren deslizándose */
+.section1-content h1,
+.section1-content p {
+  opacity: 0; /* Inicia invisible */
+  animation: slideIn 5s ease-out forwards;
+}
+
+/* Puedes ajustar el delay para que se muestren en orden */
+.section1-content h1 {
+  animation-delay: 0.5s;
+}
+
+.section1-content p {
+  animation-delay: 1s;
+}
+
+/* Keyframes para la animación de deslizamiento */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
