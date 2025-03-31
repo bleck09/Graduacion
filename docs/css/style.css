@@ -1,0 +1,17 @@
+/* Fondo negro y texto dorado */
+body {
+    background-color: #000;
+    color: gold;
+  }
+  
+  /* Títulos en negrita */
+  h1,
+  h2 {
+    font-weight: bold;
+  }
+  
+  /* Estilo del contador */
+  .countdown {
+    font-size: 2rem;
+  }
+  
