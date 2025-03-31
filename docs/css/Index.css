@@ -156,11 +156,11 @@ body {
   button {
       position: relative;
       padding: 12px 35px;
-      background: #5ff142;
+      background: #61fd41;
       font-size: 17px;
       font-weight: 500;
       color: #181818;
-      border: 3px solid #050504;
+      border: 3px solid #000000;
       border-radius: 8px;
       box-shadow: 0 0 0 #fec1958c;
       transition: all 0.3s ease-in-out;
@@ -302,30 +302,17 @@ body {
     .fil0 {
       fill: #fffdef;
     }
-    /* Animación para que los textos entren deslizándose */
-.section1-content h1,
-.section1-content p {
-  opacity: 0; /* Inicia invisible */
-  animation: slideIn 5s ease-out forwards;
-}
-
-/* Puedes ajustar el delay para que se muestren en orden */
-.section1-content h1 {
-  animation-delay: 0.5s;
-}
-
-.section1-content p {
-  animation-delay: 1s;
-}
-
-/* Keyframes para la animación de deslizamiento */
-@keyframes slideIn {
+ 
+/* Definimos la animación fadeIn */
+@keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(50px);
+    transform: translateY(20px);
   }
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
+
+
