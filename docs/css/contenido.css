@@ -463,21 +463,23 @@ html, body {
 
 /* Sección con imagen de fondo y parallax */
 .section1 {
-    background-image: url('../Img/fondo_graduacion.jpg'); /* Imagen de fondo */
-    background-size: cover; /* Cubre toda la pantalla */
-    background-position: center; /* Centra la imagen */
-    background-attachment: fixed; /* Efecto parallax, la imagen se queda fija */
-    background-repeat: no-repeat; /* No repetir la imagen */
-    height: 100vh; /* Ocupa toda la pantalla en altura */
+    background-image: url('../Img/fondo_graduacion.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    min-height: 100vh; /* Altura mínima del viewport */
+    height: auto; /* Se adapta al contenido si es mayor */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
-    overflow: hidden;
+    overflow: visible; /* Permite que se muestre todo el contenido */
     padding: 20px;
     position: relative;
 }
+
 
 /* Capa oscura encima de la imagen */
 .section1::before {

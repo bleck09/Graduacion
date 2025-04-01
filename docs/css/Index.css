@@ -19,7 +19,7 @@ body {
     background-size: cover; /* Cubre toda la pantalla */
     background-position: center; /* Centra la imagen */
     background-repeat: no-repeat; /* No repetir la imagen */
-    height: 100vh; /* Ocupa toda la pantalla en altura */
+    height: auto; /* Ocupa toda la pantalla en altura */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -156,7 +156,7 @@ body {
   button {
       position: relative;
       padding: 12px 35px;
-      background: #61fd41;
+      background: #def76e;
       font-size: 17px;
       font-weight: 500;
       color: #181818;
@@ -316,3 +316,50 @@ body {
 }
 
 
+/* Estilos para la sección de información del evento */
+.event-info {
+  background: #222;
+  padding: 20px 10px;
+  color: #fff;
+}
+
+/* Estilos base para los números y textos */
+.number, .month, .time {
+  font-weight: bold;
+}
+
+/* Tamaños iniciales (se ajustarán con JS para ser responsivos) */
+.number {
+  font-size: 4rem;
+}
+.month {
+  font-size: 2rem;
+}
+.time {
+  font-size: 4rem;
+}
+
+/* Ubicación */
+.location p {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+/* Animación de latido para elementos con clase .heartbeat */
+.heartbeat {
+  animation: heartbeat 1.5s ease-in-out infinite;
+  
+}
+
+@keyframes heartbeat {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+.Titulo21 {
+  color: gold; /* Color dorado */
+}
