@@ -1,0 +1,564 @@
+/* Estilos generales de la página */
+body {
+    font-family: 'Dancing Script', cursive;
+    background: linear-gradient(135deg, #000000, #1c1c1c, #0a0a0a); /* Degradado inicial en tonos oscuros */
+    background-size: 200% 200%; 
+    animation: cambiarFondo 5s ease infinite;
+    text-align: center;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    color: #fff; 
+}
+
+/* Animación para cambiar los colores del fondo */
+@keyframes cambiarFondo {
+    0% {
+        background-position: 0% 50%;
+        background-color: #000000; 
+    }
+    25% {
+        background-position: 50% 50%;
+        background-color: #1c1c1c; 
+    }
+    50% {
+        background-position: 100% 50%;
+        background-color: #2e2e2e; 
+    }
+    75% {
+        background-position: 50% 50%;
+        background-color: #0a0a0a; 
+    }
+    100% {
+        background-position: 0% 50%;
+        background-color: #000000; 
+    }
+}
+.Titulo21{
+    font-family: 'Dancing Script', cursive;
+    color: #fe9995;
+    font-size: 5.5em;
+}
+h1 {
+    font-family: 'Dancing Script', cursive;
+    color: #fe9995;
+    font-size: 2.5em;
+}
+h2{
+    font-size: 2.5em;
+    color:   #fe9995;
+}
+
+
+p {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.2em;
+    color:   #ffffff;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #e74c3c;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #0c0c0c33;
+}
+
+.card {
+    width: fit-content;
+    height: fit-content;
+    background-color: rgb(238, 238, 238);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    gap: 20px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.055);
+}
+
+.socialContainer {
+    width: 52px;
+    height: 52px;
+    background-color: rgb(44, 44, 44);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition-duration: .3s;
+}
+
+.containerOne:hover {
+    background-color: #d62976;
+    transition-duration: .3s;
+}
+
+.containerTwo:hover {
+    background-color: #00acee;
+    transition-duration: .3s;
+}
+
+.containerThree:hover {
+    background-color: #0072b1;
+    transition-duration: .3s;
+}
+
+.containerFour:hover {
+    background-color: #128C7E;
+    transition-duration: .3s;
+}
+
+.socialContainer:active {
+    transform: scale(0.9);
+    transition-duration: .3s;
+}
+
+.socialSvg {
+    width: 17px;
+}
+
+.socialSvg path {
+    fill: rgb(255, 255, 255);
+}
+
+.socialContainer:hover .socialSvg {
+    animation: slide-in-top 0.3s both;
+}
+
+@keyframes slide-in-top {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+/* Encapsulando la galería en una clase `.gallery3d` para evitar que se modifiquen otros estilos */
+
+.gallery3d {
+    display: flex;
+    justify-content: center;  
+    align-items: center;      
+    min-height: 100vh;       
+}
+.gallery_corazon{
+    font-size: 30vh;
+}
+
+.gallery3d .box {
+    position: relative;
+    width: 200px;
+    height: 300px;
+    transform-style: preserve-3d;
+    animation: animate 20s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        transform: perspective(1000px) rotateY(0deg);
+    }
+    100% {
+        transform: perspective(1000px) rotateY(360deg);
+    }
+}
+
+.gallery3d .box span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transform: rotateY(calc(var(--i) * 45deg)) translateZ(350px);
+}
+
+.gallery3d .box span img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Sombra para las imágenes */
+.gallery3d .box span img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-shadow: 0px 50px 50px rgba(0, 0, 0, 0.5); 
+    border-radius: 10px; 
+}
+
+.img-responsive {
+    max-width: 100%; 
+    height: auto;     
+    margin-top: 20px; 
+}
+
+
+
+/* From Uiverse.io by bhaveshxrawat */
+.cardAnahi {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.cardAn {
+    width: 190px;
+    height: 254px;
+    background: #07182E;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+    overflow: hidden;
+    border-radius: 20px;
+    color: white;
+    box-shadow: 0 8px 16px rgba(194, 108, 158, 0.4); /* Sombra alrededor de la tarjeta */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cardAn:hover {
+    transform: translateY(-10px); /* Efecto al pasar el ratón */
+    box-shadow: 0 12px 24px rgba(189, 182, 182, 0.6); /* Sombra más pronunciada al pasar el ratón */
+}
+
+.cardAnTitulo {
+    z-index: 1;
+    color: white;
+    font-size: 2.6em;
+    margin-bottom: 15px;
+}
+
+.cardAnDescrip {
+    z-index: 1;
+    font-size: 1em;
+}
+
+.cardAn::before {
+    content: '';
+    position: absolute;
+    width: 100px;
+    background-image: linear-gradient(180deg, rgb(0, 183, 255), rgb(255, 48, 255));
+    height: 130%;
+    animation: rotBGimg 3s linear infinite;
+    transition: all 0.2s linear;
+}
+
+@keyframes rotBGimg {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.cardAn::after {
+    content: '';
+    position: absolute;
+    background: #07182E;
+    inset: 5px;
+    border-radius: 15px;
+}
+
+  
+
+
+
+button {
+    position: relative;
+    padding: 12px 35px;
+    background: #fe9995;
+    font-size: 17px;
+    font-weight: 500;
+    color: #181818;
+    border: 3px solid #fec195;
+    border-radius: 8px;
+    box-shadow: 0 0 0 #fec1958c;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+  }
+  
+  .star-1 {
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    width: 25px;
+    height: auto;
+    filter: drop-shadow(0 0 0 #fffdef);
+    z-index: -5;
+    transition: all 1s cubic-bezier(0.05, 0.83, 0.43, 0.96);
+  }
+  
+  .star-2 {
+    position: absolute;
+    top: 45%;
+    left: 45%;
+    width: 15px;
+    height: auto;
+    filter: drop-shadow(0 0 0 #fffdef);
+    z-index: -5;
+    transition: all 1s cubic-bezier(0, 0.4, 0, 1.01);
+  }
+  
+  .star-3 {
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    width: 5px;
+    height: auto;
+    filter: drop-shadow(0 0 0 #fffdef);
+    z-index: -5;
+    transition: all 1s cubic-bezier(0, 0.4, 0, 1.01);
+  }
+  
+  .star-4 {
+    position: absolute;
+    top: 20%;
+    left: 40%;
+    width: 8px;
+    height: auto;
+    filter: drop-shadow(0 0 0 #fffdef);
+    z-index: -5;
+    transition: all 0.8s cubic-bezier(0, 0.4, 0, 1.01);
+  }
+  
+  .star-5 {
+    position: absolute;
+    top: 25%;
+    left: 45%;
+    width: 15px;
+    height: auto;
+    filter: drop-shadow(0 0 0 #fffdef);
+    z-index: -5;
+    transition: all 0.6s cubic-bezier(0, 0.4, 0, 1.01);
+  }
+  
+  .star-6 {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    width: 5px;
+    height: auto;
+    filter: drop-shadow(0 0 0 #fffdef);
+    z-index: -5;
+    transition: all 0.8s ease;
+  }
+  
+  button:hover {
+    background: transparent;
+    color: #d4b9a6;
+    box-shadow: 0 0 25px #fec1958c;
+  }
+  
+  button:hover .star-1 {
+    position: absolute;
+    top: -80%;
+    left: -30%;
+    width: 25px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #fffdef);
+    z-index: 2;
+  }
+  
+  button:hover .star-2 {
+    position: absolute;
+    top: -25%;
+    left: 10%;
+    width: 15px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #fffdef);
+    z-index: 2;
+  }
+  
+  button:hover .star-3 {
+    position: absolute;
+    top: 55%;
+    left: 25%;
+    width: 5px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #fffdef);
+    z-index: 2;
+  }
+  
+  button:hover .star-4 {
+    position: absolute;
+    top: 30%;
+    left: 80%;
+    width: 8px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #fffdef);
+    z-index: 2;
+  }
+  
+  button:hover .star-5 {
+    position: absolute;
+    top: 25%;
+    left: 115%;
+    width: 15px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #fffdef);
+    z-index: 2;
+  }
+  
+  button:hover .star-6 {
+    position: absolute;
+    top: 5%;
+    left: 60%;
+    width: 5px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #fffdef);
+    z-index: 2;
+  }
+  
+  .fil0 {
+    fill: #fffdef;
+  }
+  
+/* Eliminar márgenes y padding global */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden; /* Evita el desplazamiento horizontal */
+}
+
+/* Sección con imagen de fondo y parallax */
+.section1 {
+    background-image: url('../Img/Graducacion.png'); /* Imagen de fondo */
+    background-size: cover; /* Cubre toda la pantalla */
+    background-position: center; /* Centra la imagen */
+    background-attachment: fixed; /* Efecto parallax, la imagen se queda fija */
+    background-repeat: no-repeat; /* No repetir la imagen */
+    height: 100vh; /* Ocupa toda la pantalla en altura */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    overflow: hidden;
+    padding: 20px;
+    position: relative;
+}
+
+/* Capa oscura encima de la imagen */
+.section1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.1); /* Oscurece el fondo */
+    z-index: 1;
+}
+
+/* Asegura que el contenido esté por encima de la capa oscura */
+.section1 > * {
+    position: relative;
+    z-index: 2;
+}
+
+/* Efecto de transición suave para el contenido */
+.section1-content {
+    transition: transform 1s ease; /* Transición suave al hacer scroll */
+}
+
+.section1.scrolled .section1-content {
+    transform: translateY(-50px); /* Mueve el contenido hacia arriba al hacer scroll */
+}
+
+/* --- Ajustes para dispositivos móviles --- */
+@media (max-width: 768px) {
+    .section1 {
+        background-attachment: fixed; /* Mantén el efecto parallax en móviles */
+        height: 100vh; /* La altura sigue siendo del 100% de la pantalla */
+    }
+    
+    .section1 > * {
+        padding: 10px; /* Reduce los paddings en móviles */
+    }
+
+   
+    
+    .section1-content {
+        padding: 20px 10px;
+        transform: translateY(-20px); /* Ajuste menor para la transición */
+    }
+}
+
+/* Ajuste para pantallas más pequeñas como teléfonos */
+@media (max-width: 480px) {
+    .section1 {
+        height: auto; /* Ajusta la altura en pantallas muy pequeñas */
+    }
+    
+    .section1-content {
+        transform: translateY(0px); /* Elimina el movimiento en pantallas muy pequeñas */
+    }
+
+    
+}
+
+hr {
+    border: none; /* Elimina el borde predeterminado */
+    height: 5px; /* Define el grosor de la línea */
+    background-color: #fe9995; /* Cambia el color de la línea */
+    width: 80%; /* Ajusta el ancho de la línea al 80% */
+    margin: 40px auto; /* Centra la línea y añade un margen superior e inferior */
+    box-sizing: border-box; /* Asegura que el padding no cause desbordamientos */
+    border-radius: 5px; /* Redondea los bordes de la línea */
+    box-shadow: 0 4px 10px rgba(235, 231, 231, 0.7); /* Añade una sombra más prominente */
+}
+
+.img-responsive {
+    width: 200px; /* Tamaño inicial de la imagen */
+    transition: transform 0.5s ease-in-out; /* Transición suave para el efecto */
+    animation: pulsar 2s infinite; /* Animación de pulsación */
+}
+
+@keyframes pulsar {
+    0% {
+        transform: scale(1); /* Tamaño normal */
+    }
+    50% {
+        transform: scale(1.2); /* Aumenta un 20% */
+    }
+    100% {
+        transform: scale(1); /* Vuelve al tamaño normal */
+    }
+}
