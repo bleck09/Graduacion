@@ -230,6 +230,7 @@ footer {
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
+    
 }
 
 .cardAn {
@@ -248,7 +249,9 @@ footer {
     color: white;
     box-shadow: 0 8px 16px rgba(194, 108, 158, 0.4); /* Sombra alrededor de la tarjeta */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
 }
+
 
 .cardAn:hover {
     transform: translateY(-10px); /* Efecto al pasar el ratón */
@@ -562,3 +565,181 @@ hr {
         transform: scale(1); /* Vuelve al tamaño normal */
     }
 }
+
+/* Contenedor general de las tarjetas */
+.itinerary-cards {
+  display: flex;
+  flex-wrap: wrap; /* Permite que las tarjetas se ajusten en varias filas si no caben */
+  justify-content: center;
+  gap: 20px; /* Espacio entre tarjetas */
+  margin-top: 30px;
+}
+
+/* Estilo base de cada tarjeta */
+.itinerary-card {
+  background-color: #0e0e0e; /* Fondo oscuro (puedes cambiarlo) */
+  border-radius: 10px;
+  padding: 20px;
+  width: 220px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Efecto hover */
+.itinerary-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px rgba(0,0,0,0.5);
+}
+
+/* Contenedor del ícono */
+.icon-container {
+  font-size: 2.5rem;
+  color: #fcd900; /* Color dorado para el ícono */
+  margin-bottom: 15px;
+}
+
+/* Título de la tarjeta */
+.itinerary-title {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+  color: #ffffff;
+}
+
+/* Tiempo del evento */
+.itinerary-time {
+  font-size: 1rem;
+  color: #d4d4d4;
+  margin-bottom: 10px;
+}
+
+/* Descripción */
+.itinerary-description {
+  font-size: 1rem;
+  color: #c0c0c0;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+  .itinerary-card {
+    width: 200px;
+  }
+  .icon-container {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .itinerary-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+  .itinerary-card {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+}
+
+
+
+/* =============================
+   Tarjetas (cardAn)
+============================= */
+
+/* Contenedor principal de las tarjetas (si lo usas) */
+.cardAnahi {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+  }
+  
+  /* Tarjeta individual */
+  .cardAn {
+    width: 240px;            /* Ajusta el ancho de cada tarjeta */
+    min-height: 400px;       /* Altura mínima, crece si el contenido es mayor */
+    background: #07182E;     /* Color de fondo */
+    position: relative;      /* Para controlar z-index de pseudo-elementos */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;  /* Contenido inicia en la parte superior */
+    padding: 20px;
+    text-align: center;
+    overflow: hidden;
+    border-radius: 20px;
+    color: white;
+    box-shadow: 0 8px 16px rgba(194, 108, 158, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Efecto hover */
+  .cardAn:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(5, 182, 226, 0.6);
+  }
+  
+  /* Pseudo-elementos de fondo */
+  .cardAn::before {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 160%;
+    background-image: linear-gradient(180deg, rgb(0, 183, 255), rgb(255, 48, 255));
+    animation: rotBGimg 3s linear infinite;
+    transition: all 0.2s linear;
+    z-index: 0; /* Al fondo */
+  }
+  
+  .cardAn::after {
+    content: '';
+    position: absolute;
+    background: #000000;
+    inset: 5px;              /* Equivale a top:5px; right:5px; bottom:5px; left:5px; */
+    border-radius: 15px;
+    z-index: 1;              /* Encima de ::before, debajo del contenido */
+  }
+  
+  /* Animación de rotación para ::before */
+  @keyframes rotBGimg {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /* Contenido al frente */
+  .cardAn * {
+    position: relative;
+    z-index: 2;
+  }
+  
+  /* Imagen de la tarjeta */
+  .cardAn img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    margin-bottom: 10px;
+  }
+  
+  /* Título de la tarjeta */
+  .cardAnTitulo {
+    font-size: 2rem;  /* Ajusta el tamaño del título */
+    margin-bottom: 10px;
+  }
+  
+  /* Hora del evento, si deseas estilizarlo aparte */
+  .cardAnHorario {
+    font-size: 1rem;
+    margin-bottom: 5px;
+  }
+  
+  /* Descripción de la tarjeta */
+  .cardAnDescrip {
+    font-size: 1.2rem;
+    line-height: 1.3; /* Aumenta la altura de línea si deseas */
+  }
