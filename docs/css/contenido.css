@@ -36,7 +36,7 @@ body {
 }
 .Titulo21{
     font-family: 'Dancing Script', cursive;
-    color: #fe9995;
+    color: white;
     font-size: 5.5em;
 }
 h1 {
@@ -46,7 +46,7 @@ h1 {
 }
 h2{
     font-size: 2.5em;
-    color:   #fe9995;
+    color:   gold;
 }
 
 
@@ -459,7 +459,7 @@ html, body {
 
 /* Sección con imagen de fondo y parallax */
 .section1 {
-    background-image: url('../Img/Graducacion.png'); /* Imagen de fondo */
+    background-image: url('../Img/fondo_graduacion.jpg'); /* Imagen de fondo */
     background-size: cover; /* Cubre toda la pantalla */
     background-position: center; /* Centra la imagen */
     background-attachment: fixed; /* Efecto parallax, la imagen se queda fija */
@@ -483,7 +483,7 @@ html, body {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.1); /* Oscurece el fondo */
+    background-color: rgba(0, 0, 0, 0.8); /* Oscurece el fondo */
     z-index: 1;
 }
 
