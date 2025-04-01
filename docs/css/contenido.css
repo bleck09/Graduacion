@@ -747,27 +747,6 @@ hr {
   }
 
 
-  .ubicacion-img {
-    border: 10px;     /* Borde blanco de 4px, ajusta el color y grosor a tu gusto */
-    border-radius: 20px;          /* Esquinas redondeadas */
-                    /* Espacio interno, que actúa como "relleno" alrededor de la imagen */
-    box-sizing: border-box;       /* Para que el padding se incluya en el tamaño total */
-    box-shadow: 0 8px 16px rgba(238, 238, 234, 0.3);
-           /* Espacio inferior para separar de otros elementos */
-  }
-
-  .my-container {
-    background: rgb(32, 32, 31); /* Fondo semitransparente */
-    border: 2px solid rgba(255, 255, 255, 0.2); /* Borde sutil */
-    border-radius: 15px;         /* Esquinas redondeadas */
-    margin: 0 12px;
-    padding: 25px;             /* Espacio interno para que el contenido no quede pegado a los bordes */
-    box-shadow: 0 8px 16px rgba(250, 248, 248, 0.3);  /* Sombra para dar profundidad */
-  }
-
-
-
-
   /* Sección con imagen de fondo y parallax */
 .section3 {
   background-image: url('../Img/fondo_graduacion.jpg');
@@ -873,11 +852,46 @@ hr {
     
 }
 
+.uni-img {
+    max-width: 200px;  /* Ajusta este valor según lo que consideres adecuado */
+    width: 100%;
+    height: auto;
+    border-radius: 25px;       /* Esquinas redondeadas */
+    padding: 5px;              /* Espacio interno */
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.7); /* Sombra blanca */
+  }
 
 
-
-
-
+/* Estilos para la imagen de ubicación */
+.ubicacion-img {
+    max-width: 200px; /* O el tamaño que prefieras */
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    /* Animación de latido */
+    animation: heartbeat 1.5s ease-in-out infinite;
+  }
+  
+  /* Keyframes para el efecto de latido */
+  @keyframes heartbeat {
+    0% {
+      transform: scale(1);
+    }
+    25% {
+      transform: scale(1.1);
+    }
+    50% {
+      transform: scale(1);
+    }
+    75% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
 
   /* Sección con imagen de fondo y parallax */
   .section4 {
@@ -901,7 +915,7 @@ hr {
       content: '';
       position: absolute;
       top: 0; left: 0; right: 0; bottom: 0;
-      background-color: rgba(0, 0, 0, 0.6);
+      background-color: rgba(0, 0, 0, 0.9);
       z-index: 1;
   }
   
