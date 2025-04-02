@@ -1,5 +1,5 @@
-// Fecha de la graduación: 5 de abril de 2025 a medianoche
-const graduationDate = new Date("April 5, 2025 00:00:00").getTime();
+// Fecha del acto: 5 de abril de 2025 a las 14:00:00
+const graduationDate = new Date("April 5, 2025 14:00:00").getTime();
 
 const countdownInterval = setInterval(() => {
   const now = new Date().getTime();
@@ -19,6 +19,6 @@ const countdownInterval = setInterval(() => {
   // Si la cuenta regresiva llega a 0, muestra un mensaje
   if (distance < 0) {
     clearInterval(countdownInterval);
-    document.querySelector(".section3-content").innerHTML = "<h1>¡Es el día de la Graduación!</h1>";
+    document.querySelector(".section3-content").innerHTML = "<h1>¡Es el día del acto!</h1>";
   }
 }, 1000);
