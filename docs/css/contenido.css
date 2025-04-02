@@ -999,3 +999,52 @@ hr {
   
       
   }
+
+/* Tarjeta de calendario */
+.calendar-card {
+    background: #ffffff;
+    width: 180px;
+    border-radius: 10px;
+    text-align: center;
+    padding: 10px 0;
+    margin: 0 auto;
+    box-shadow: 0 5px 10px rgba(243, 242, 242, 0.986);
+  }
+  
+  /* Mes */
+  .calendar-card .month {
+    background: #1e90ff;
+    color: #fff;
+    margin: 0;
+    padding: 5px 10px;
+    border-radius: 0 0 8px 8px;
+    font-size: 1.2rem;
+  }
+  
+  /* Día (Número) con animación de latido */
+  .calendar-card .date {
+    font-size: 3rem;
+    margin: 10px 0 5px;
+    color: #020202;
+    font-weight: bold;
+    animation: heartbeat 1.5s ease-in-out infinite;
+  }
+  
+  /* Día de la semana */
+  .calendar-card .weekday {
+    font-size: 1rem;
+    color: #383838;
+    margin: 0;
+  }
+  
+  /* Keyframes para la animación de latido */
+  @keyframes heartbeat {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+  }
+
+  
