@@ -897,7 +897,7 @@ hr {
 
   /* Sección con imagen de fondo y parallax */
   .section4 {
-    background-image: url('../Img/fondo_graduacion.jpg');
+    background-image: url('../Img/Evento3.jpeg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -917,7 +917,7 @@ hr {
       content: '';
       position: absolute;
       top: 0; left: 0; right: 0; bottom: 0;
-      background-color: rgba(0, 0, 0, 0.9);
+      background-color: rgba(0, 0, 0, 0.8);
       z-index: 1;
   }
   
